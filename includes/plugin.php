@@ -104,7 +104,7 @@ final class Plugin
 	public function init(): void
 	{
 		add_action('elementor/widgets/register', [$this, 'register_widgets']);
-		add_action('elementor/controls/register', [$this, 'register_controls']);
+		// add_action('elementor/controls/register', [$this, 'register_controls']);
 
 		add_action('elementor/elements/categories_registered', [$this, 'add_elementor_widget_categories']);
 	}
@@ -124,10 +124,10 @@ final class Plugin
 	{
 
 		require_once(__DIR__ . '/widgets/widget-list.php');
-		require_once(__DIR__ . '/widgets/widget-2.php');
+		// require_once(__DIR__ . '/widgets/widget-2.php');
 
-		$widgets_manager->register(new Widget_1());
-		$widgets_manager->register(new Widget_2());
+		$widgets_manager->register(new Elementor_List_Widget());
+		// $widgets_manager->register(new Widget_2());
 	}
 
 
