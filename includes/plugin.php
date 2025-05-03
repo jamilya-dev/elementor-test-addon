@@ -123,21 +123,21 @@ final class Plugin
 	public function register_widgets($widgets_manager): void
 	{
 
-		require_once(__DIR__ . '/includes/widgets/widget-list.php');
-		require_once(__DIR__ . '/includes/widgets/widget-2.php');
+		require_once(__DIR__ . '/widgets/widget-list.php');
+		require_once(__DIR__ . '/widgets/widget-2.php');
 
 		$widgets_manager->register(new Widget_1());
 		$widgets_manager->register(new Widget_2());
 	}
 
 
-	public function register_controls($controls_manager): void
-	{
+	// public function register_controls($controls_manager): void
+	// {
 
-		require_once(__DIR__ . '/includes/controls/control-1.php');
-		require_once(__DIR__ . '/includes/controls/control-2.php');
+	// 	require_once(__DIR__ . '/controls/control-1.php');
+	// 	require_once(__DIR__ . '/controls/control-2.php');
 
-		$controls_manager->register(new Control_1());
-		$controls_manager->register(new Control_2());
-	}
+	// 	$controls_manager->register(new Control_1());
+	// 	$controls_manager->register(new Control_2());
+	// }
 }
